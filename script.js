@@ -46,19 +46,19 @@ document.querySelectorAll('.count').forEach(el => cio.observe(el));
 // 5. Démo menu interactive
 const MENU = {
   tacos: [
-    { name: '🌮 Tacos poulet XL', price: '45 DH', img: 'images/tacos-poulet-xl.jpg' },
-    { name: '🌮 Tacos viande hachée', price: '40 DH', img: 'images/tacos-viande-hachee.jpg' },
-    { name: '🌮 Tacos mixte XXL', price: '55 DH', img: 'images/tacos-mixte-xxl.jpg' },
+    { name: '🌮 Tacos poulet XL', price: '45 DH', img: IMGS1['tacos-poulet-xl'] },
+    { name: '🌮 Tacos viande hachée', price: '40 DH', img: IMGS1['tacos-viande-hachee'] },
+    { name: '🌮 Tacos mixte XXL', price: '55 DH', img: IMGS1['tacos-mixte-xxl'] },
   ],
   pizza: [
-    { name: '🍕 Pizza 4 fromages', price: '60 DH', img: 'images/pizza-4-fromages.jpg' },
-    { name: '🍕 Pizza pepperoni', price: '65 DH', img: 'images/pizza-pepperoni.jpg' },
-    { name: '🍕 Pizza fruits de mer', price: '75 DH', img: 'images/pizza-fruits-de-mer.jpg' },
+    { name: '🍕 Pizza 4 fromages', price: '60 DH', img: IMGS2['pizza-4-fromages'] },
+    { name: '🍕 Pizza pepperoni', price: '65 DH', img: IMGS2['pizza-pepperoni'] },
+    { name: '🍕 Pizza fruits de mer', price: '75 DH', img: IMGS2['pizza-fruits-de-mer'] },
   ],
   drinks: [
-    { name: '🥤 Jus d\'avocat', price: '20 DH', img: 'images/jus-avocat.jpg' },
-    { name: '🥤 Panaché', price: '18 DH', img: 'images/panache.jpg' },
-    { name: '🥤 Soda 33cl', price: '10 DH', img: 'images/soda.jpg' },
+    { name: '🥤 Jus d\'avocat', price: '20 DH', img: IMGS3['jus-avocat'] },
+    { name: '🥤 Panaché', price: '18 DH', img: IMGS3['panache'] },
+    { name: '🥤 Soda 33cl', price: '10 DH', img: IMGS3['soda'] },
   ]
 };
 
