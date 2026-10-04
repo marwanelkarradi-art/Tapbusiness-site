@@ -69,6 +69,35 @@
   </div>
 </header>
 
+<!-- QR GENERATOR -->
+<section id="qr-generator" class="section">
+  <div class="eyebrow center">✦ Jereb daba</div>
+  <h2 class="sec-title reveal">Generi <span class="grad">QR code dyalek</span></h2>
+  <div class="qr-box reveal">
+    <div class="qr-form">
+      <label for="qrName">Smit restaurant dyalek</label>
+      <input type="text" id="qrName" placeholder="b7al: Chez Yasmine" maxlength="40" autocomplete="off">
+      <label>Style dyal QR</label>
+      <div class="qr-styles">
+        <button type="button" class="on" data-dark="#0d9488" data-light="#ffffff"><i style="background:#0d9488"></i>Teal</button>
+        <button type="button" data-dark="#b8860b" data-light="#ffffff"><i style="background:#e8c15a"></i>Gold</button>
+        <button type="button" data-dark="#141414" data-light="#ffffff"><i style="background:#141414"></i>Dark</button>
+      </div>
+      <button class="btn" id="qrBtn" type="button">⚡ Generi QR dyali</button>
+      <p class="qr-note">Scannih b telephonek — ghadi y7el lien dyal menu dyalek 🔗</p>
+    </div>
+    <div class="qr-result">
+      <div class="qr-card">
+        <div id="qrCanvas" aria-label="QR code généré"></div>
+        <div class="qr-card-name" id="qrCardName">🍽️ Chez Yasmine</div>
+        <div class="qr-card-url" id="qrCardUrl">marwanelkarradi-art.github.io/Tapbusiness-site/?r=chez-yasmine</div>
+      </div>
+      <p class="qr-hint">Hakka ghadi ychoufou clients dyalek menu dyalek 👆</p>
+      <button class="btn btn-ghost btn-sm" id="qrDl" type="button">⬇️ Télécharger QR</button>
+    </div>
+  </div>
+</section>
+
 <!-- MARQUEE -->
 <div class="marquee"><div class="marquee-track">
   <span>QR CODE ✦ BILINGUE FR/AR ✦ COMMANDE WHATSAPP ✦ SANS APPLICATION ✦ PHOTOS HD ✦ MISE À JOUR INSTANTANÉE ✦&nbsp;</span>
@@ -102,6 +131,41 @@
       </div>
       <div class="demo-items" id="demoItems"></div>
       <a href="https://wa.me/212771899120?text=Bonjour,%20je%20veux%20commander%20🍽️" class="btn" target="_blank">💬 Commander sur WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after" class="section">
+  <div class="eyebrow center">✦ 9bel / Daba</div>
+  <h2 class="sec-title reveal">Jerr <span class="grad">l'khet</span> w chouf l'fer9</h2>
+  <div class="ba-wrap reveal">
+    <div class="ba-slider" id="baSlider">
+      <div class="ba-pane ba-after">
+        <div class="digi">
+          <div class="digi-head"><span>🍽️ Chez Yasmine</span><span class="digi-live">● en ligne</span></div>
+          <div class="digi-item"><img data-wimg="IMGS1:tacos-poulet-xl" alt="Tacos"><div><b>Tacos XL</b><small>Poulet, frites, sauce algérienne</small></div><em>45 DH</em></div>
+          <div class="digi-item"><img data-wimg="IMGS2:pizza-4-fromages" alt="Pizza"><div><b>Pizza 4 fromages</b><small>Mozzarella, gorgonzola...</small></div><em>60 DH</em></div>
+          <div class="digi-item"><img data-wimg="IMGS3:jus-avocat" alt="Jus d'avocat"><div><b>Jus d'avocat</b><small>Frais, sans sucre ajouté</small></div><em>20 DH</em></div>
+          <div class="digi-qrrow"><div id="digiQr"></div><small>Scanni b telephonek — menu kamel 📱</small></div>
+          <div class="digi-order">💬 Commander sur WhatsApp</div>
+        </div>
+      </div>
+      <div class="ba-pane ba-before" id="baBefore">
+        <div class="paper">
+          <h4>— MENU —</h4>
+          <div class="paper-item"><span>Tacos Poulet</span><span class="dots"></span><span>45</span></div>
+          <div class="paper-item"><span>Tacos Viande</span><span class="dots"></span><span>40</span></div>
+          <div class="paper-item"><span>Pizza <s>55</s> 60</span><span class="dots"></span><span>60</span></div>
+          <div class="paper-item"><span>Jus d'avocat</span><span class="dots"></span><span>???</span></div>
+          <div class="paper-item"><span>Panaché</span><span class="dots"></span><span>18</span></div>
+          <p class="paper-foot">* prix 9dam... sowel serveur 😅</p>
+          <div class="stain"></div>
+        </div>
+      </div>
+      <div class="ba-handle" id="baHandle" tabindex="0" aria-label="Curseur avant / après"><span>⟨ ⟩</span></div>
+      <div class="ba-tag ba-tag-l">📄 9bel: war9a</div>
+      <div class="ba-tag ba-tag-r">📱 Daba: digital</div>
     </div>
   </div>
 </section>
@@ -190,5 +254,7 @@
 <script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
 <script src="js/hero3d.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/widgets.js"></script>
 </body>
 </html>

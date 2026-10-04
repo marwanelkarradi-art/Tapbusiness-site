@@ -275,3 +275,97 @@ footer .tiny{font-size:13px;margin-top:8px}
 .demo-item img{width:74px;height:74px;object-fit:cover;border-radius:14px;flex-shrink:0;
   box-shadow:0 6px 18px rgba(0,0,0,.4);border:1px solid var(--line)}
 .demo-txt{flex:1;font-weight:600;font-size:16px}
+
+/* ══════ QR GENERATOR ══════ */
+.qr-box{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;max-width:940px;margin:auto}
+.qr-form{flex:1;min-width:290px;background:var(--glass);border:1px solid var(--line);
+  border-radius:22px;padding:36px 32px;backdrop-filter:blur(12px)}
+.qr-form label{display:block;font-family:var(--f-head);font-weight:600;font-size:14px;margin:0 0 10px}
+.qr-form label:not(:first-child){margin-top:22px}
+.qr-form input{width:100%;background:rgba(255,255,255,.05);border:1px solid var(--line);
+  border-radius:12px;padding:15px 18px;color:var(--txt);font-size:16px;
+  font-family:var(--f-body);outline:none;transition:border-color .2s}
+.qr-form input:focus{border-color:var(--teal)}
+.qr-styles{display:flex;gap:10px}
+.qr-styles button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt);
+  padding:11px;border-radius:12px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+.qr-styles button i{width:16px;height:16px;border-radius:50%;display:inline-block;flex-shrink:0}
+.qr-styles button.on{border-color:var(--teal);background:rgba(20,224,200,.1);
+  box-shadow:0 6px 18px rgba(20,224,200,.15)}
+.qr-form .btn{width:100%;margin-top:26px}
+.qr-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
+.qr-result{flex:1;min-width:290px;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:18px}
+.qr-card{background:#fff;border-radius:22px;padding:30px 30px 24px;text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,.45),0 0 0 1px rgba(232,193,90,.25);
+  animation:float 5s ease-in-out infinite}
+#qrCanvas{display:flex;justify-content:center;min-height:220px;align-items:center}
+#qrCanvas img,#qrCanvas canvas{display:block;border-radius:8px}
+.qr-err{color:#b91c1c;font-size:14px;max-width:230px}
+.qr-card-name{font-family:var(--f-head);font-weight:700;color:#0b1120;font-size:19px;margin-top:16px}
+.qr-card-url{color:#64748b;font-size:12px;margin-top:6px;word-break:break-all;max-width:240px}
+.qr-hint{color:var(--muted);font-size:15px;text-align:center}
+
+/* ══════ BEFORE / AFTER ══════ */
+.ba-wrap{max-width:920px;margin:auto}
+.ba-slider{position:relative;height:480px;border-radius:24px;overflow:hidden;
+  border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.4);
+  cursor:ew-resize;user-select:none;-webkit-user-select:none;touch-action:pan-y}
+.ba-pane{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:32px}
+.ba-after{background:radial-gradient(500px 300px at 50% 18%,rgba(20,224,200,.12),transparent),
+  linear-gradient(160deg,#0b1f1c,#070a13)}
+.ba-before{background:#ece1c9;z-index:2;clip-path:inset(0 50% 0 0)}
+.ba-tag{position:absolute;top:16px;z-index:5;pointer-events:none;
+  background:rgba(7,10,19,.78);backdrop-filter:blur(8px);border:1px solid var(--line);
+  padding:9px 18px;border-radius:30px;font-size:14px;font-weight:700;white-space:nowrap}
+.ba-tag-l{left:16px}
+.ba-tag-r{right:16px}
+.ba-handle{position:absolute;top:0;bottom:0;left:50%;width:3px;z-index:4;
+  background:linear-gradient(180deg,var(--teal),var(--gold));transform:translateX(-50%);
+  pointer-events:none;outline:none}
+.ba-handle:focus-visible span{box-shadow:0 0 0 4px rgba(232,193,90,.4)}
+.ba-handle span{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:54px;height:54px;border-radius:50%;background:rgba(7,10,19,.92);
+  border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;
+  font-size:18px;color:var(--gold);box-shadow:0 8px 24px rgba(0,0,0,.5)}
+/* mockup war9a */
+.paper{position:relative;background:#f7efdc;border-radius:6px;padding:34px 30px;
+  width:min(400px,92%);transform:rotate(-1.2deg);color:#4a3b28;font-family:Georgia,serif;
+  box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.paper h4{text-align:center;letter-spacing:6px;font-size:22px;margin-bottom:18px;color:#3a2d1d}
+.paper-item{display:flex;align-items:baseline;gap:8px;padding:8px 0;font-size:15px}
+.paper-item .dots{flex:1;border-bottom:2px dotted #b49b6c;transform:translateY(-4px)}
+.paper-item s{color:#a33}
+.paper-foot{text-align:center;font-size:12px;color:#8a744f;margin-top:16px;font-style:italic}
+.stain{position:absolute;width:130px;height:130px;right:6px;bottom:4px;border-radius:50%;
+  background:radial-gradient(circle,transparent 52%,rgba(122,74,22,.18) 56%,
+  rgba(122,74,22,.34) 61%,rgba(122,74,22,.12) 66%,transparent 70%);
+  transform:rotate(12deg);pointer-events:none}
+/* mockup digital */
+.digi{width:min(400px,92%);background:rgba(13,25,30,.94);
+  border:1px solid rgba(20,224,200,.25);border-radius:20px;padding:22px;
+  box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.digi-head{display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--f-head);font-weight:700;margin-bottom:14px}
+.digi-live{font-size:11px;color:var(--teal);font-weight:600}
+.digi-item{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.04);
+  border:1px solid var(--line);border-radius:12px;padding:10px;margin-bottom:10px;text-align:left}
+.digi-item img{width:52px;height:52px;object-fit:cover;border-radius:10px;flex-shrink:0;background:#0b1120}
+.digi-item div{flex:1;min-width:0}
+.digi-item b{font-size:14px;display:block}
+.digi-item small{color:var(--muted);font-size:11px}
+.digi-item em{color:var(--gold);font-style:normal;font-weight:700;font-size:14px;white-space:nowrap}
+.digi-qrrow{display:flex;align-items:center;gap:12px;margin:12px 0;
+  background:rgba(20,224,200,.07);border:1px dashed rgba(20,224,200,.35);
+  border-radius:12px;padding:10px 12px}
+.digi-qrrow small{color:var(--muted);font-size:12px}
+#digiQr{display:flex;flex-shrink:0}
+#digiQr img,#digiQr canvas{display:block;border-radius:6px}
+.digi-order{background:#22c55e;text-align:center;padding:12px;border-radius:12px;
+  font-weight:700;font-size:14px;margin-top:4px}
+@media(max-width:640px){
+  .ba-slider{height:450px}
+  .ba-pane{padding:18px}
+  .qr-box{gap:26px}
+}
