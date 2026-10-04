@@ -220,11 +220,18 @@
   resize();
   window.addEventListener('resize', resize);
 
-  /* ---------- Souris (parallaxe) ---------- */
+  /* ---------- Souris + Touch (parallaxe) ---------- */
   var mx = 0, my = 0, smx = 0, smy = 0;
   window.addEventListener('mousemove', function (e) {
     mx = (e.clientX / window.innerWidth) * 2 - 1;
     my = (e.clientY / window.innerHeight) * 2 - 1;
+  }, { passive: true });
+  /* Touch: swbe3 kay7errek l'machhad 3D f telephone */
+  hero.addEventListener('touchmove', function (e) {
+    var t = e.touches[0];
+    if (!t) return;
+    mx = (t.clientX / window.innerWidth) * 2 - 1;
+    my = (t.clientY / window.innerHeight) * 2 - 1;
   }, { passive: true });
 
   /* ---------- Scroll (zoom subtil) ---------- */
