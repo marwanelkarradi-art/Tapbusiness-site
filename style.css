@@ -239,6 +239,17 @@ footer .tiny{font-size:13px;margin-top:8px}
 #particles{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.7}
 .hero-inner{position:relative;z-index:2}
 
+/* Canvas 3D (Three.js) — couche entre particles et contenu */
+#hero3d{position:absolute;inset:0;width:100%;height:100%;z-index:1;
+  pointer-events:none;display:block}
+
+/* Badge 3D */
+.chip3d{display:inline-flex;align-items:center;gap:8px;margin-top:26px;
+  padding:9px 18px;border-radius:30px;font-size:13px;font-weight:600;
+  color:var(--gold);background:rgba(232,193,90,.08);
+  border:1px solid rgba(232,193,90,.35);backdrop-filter:blur(8px);
+  animation:rise .9s .75s cubic-bezier(.2,.7,.3,1) both}
+
 /* Typewriter */
 .typed-line{font-family:var(--f-head);font-size:19px;font-weight:600;color:var(--txt);
   margin:-6px 0 18px;min-height:30px}
