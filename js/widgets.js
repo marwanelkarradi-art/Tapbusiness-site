@@ -2,7 +2,7 @@
 (function(){
   'use strict';
 
-  var SITE = 'https://marwanelkarradi-art.github.io/Tapbusiness-site/';
+  var SITE = 'https://marwanelkarradi-art.github.io/Tapbusiness-site/demo.html';
 
   function slugify(s){
     return (s || '').toLowerCase().trim()

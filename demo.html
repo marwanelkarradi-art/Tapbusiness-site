@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Menu Démo — TAPBusiness.ma</title>
+<meta name="description" content="Démo de menu digital avec QR code — TAPBusiness.ma">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dm-body">
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+
+<!-- Bannière démo -->
+<a class="dm-banner" href="index.html">✨ Démo TAPBusiness.ma — imaginez <b>VOTRE</b> restaurant ici 👆</a>
+
+<!-- Header resto -->
+<header class="dm-header">
+  <div class="dm-badge">📱 Menu Digital</div>
+  <h1 id="dmName">Restaurant Démo</h1>
+  <p class="dm-credit">propulsé par <b>TAPBusiness.ma</b></p>
+  <div class="dm-mode" role="group" aria-label="Mode">
+    <button id="dmModeIn" class="on" type="button">🪑 Sur place</button>
+    <button id="dmModeOut" type="button">📦 À emporter</button>
+  </div>
+</header>
+
+<!-- Catégories sticky -->
+<nav class="dm-cats" id="dmCats"></nav>
+
+<!-- Plats -->
+<main class="dm-list" id="dmList"></main>
+
+<footer class="dm-foot">
+  <p>🍽️ Menu démo généré par <a href="index.html"><b>TAPBusiness.ma</b></a></p>
+</footer>
+
+<!-- Bouton panier flottant -->
+<button class="dm-cartbtn" id="dmCartBtn" type="button" aria-label="Ouvrir le panier">
+  🛒 <span class="dm-count" id="dmCount">0</span>
+</button>
+
+<!-- Tiroir panier -->
+<div class="dm-overlay" id="dmOverlay"></div>
+<aside class="dm-drawer" id="dmDrawer" aria-hidden="true">
+  <div class="dm-drawer-head">
+    <h2>🧾 Votre commande</h2>
+    <button class="dm-close" id="dmClose" type="button" aria-label="Fermer">✕</button>
+  </div>
+  <div class="dm-drawer-items" id="dmDrawerItems"></div>
+  <input class="dm-note" id="dmNote" type="text" placeholder="Note (ex: sans oignons…)" maxlength="120">
+  <div class="dm-total"><span>Total</span><b id="dmTotal">0 DH</b></div>
+  <a class="dm-order" id="dmOrder" href="#" target="_blank" rel="noopener">💬 Commander via WhatsApp</a>
+  <p class="dm-demowarn">🧪 Démo — la commande arrive sur WhatsApp TAPBusiness</p>
+</aside>
+
+<script src="img1.js"></script>
+<script src="img2.js"></script>
+<script src="img3.js"></script>
+<script src="js/demo.js"></script>
+</body>
+</html>
