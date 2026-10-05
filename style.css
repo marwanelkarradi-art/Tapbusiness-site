@@ -293,6 +293,12 @@ footer .tiny{font-size:13px;margin-top:8px}
 .qr-styles button i{width:16px;height:16px;border-radius:50%;display:inline-block;flex-shrink:0}
 .qr-styles button.on{border-color:var(--teal);background:rgba(20,224,200,.1);
   box-shadow:0 6px 18px rgba(20,224,200,.15)}
+.qr-modes{display:flex;gap:10px;margin-top:14px}
+.qr-modes button{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--txt);
+  padding:11px;border-radius:12px;cursor:pointer;font-size:14px;font-weight:600;transition:all .2s}
+.qr-modes button.on{border-color:var(--teal);background:rgba(20,224,200,.1);
+  box-shadow:0 6px 18px rgba(20,224,200,.15)}
 .qr-form .btn{width:100%;margin-top:26px}
 .qr-note{text-align:center;color:var(--muted);font-size:13px;margin-top:16px}
 .qr-result{flex:1;min-width:290px;display:flex;flex-direction:column;

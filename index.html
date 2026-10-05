@@ -77,6 +77,12 @@
     <div class="qr-form">
       <label for="qrName">Smit restaurant dyalek</label>
       <input type="text" id="qrName" placeholder="b7al: Chez Yasmine" maxlength="40" autocomplete="off">
+      <div class="qr-modes">
+        <button type="button" class="on" data-qrmode="name">🍽️ Smiya dyal resto</button>
+        <button type="button" data-qrmode="url">🔗 Lien khass (Google reviews...)</button>
+      </div>
+      <label for="qrUrl" id="qrUrlLabel" style="display:none">Lien dyalek</label>
+      <input type="text" id="qrUrl" placeholder="https://g.page/r/..." autocomplete="off" style="display:none">
       <label>Style dyal QR</label>
       <div class="qr-styles">
         <button type="button" class="on" data-dark="#0d9488" data-light="#ffffff"><i style="background:#0d9488"></i>Teal</button>
@@ -255,6 +261,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.152.2/three.min.js"></script>
 <script src="js/hero3d.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/qrgen.js"></script>
 <script src="js/widgets.js"></script>
 </body>
 </html>
