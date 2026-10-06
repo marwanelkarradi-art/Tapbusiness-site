@@ -80,7 +80,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.15;letter-spacing:-.02em}
 /* hero orbit nodes */
 .hero-visual{position:relative;display:flex;justify-content:center;align-items:center;min-height:660px}
 .orbit{position:absolute;inset:0;pointer-events:none}
-.onode{position:absolute;font-family:var(--font-d);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(19,19,22,.9);border:1px solid var(--line);color:var(--mut);padding:9px 15px;border-radius:99px;backdrop-filter:blur(6px);animation:floaty 7s ease-in-out infinite}
+.onode{position:absolute;z-index:5;font-family:var(--font-d);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:rgba(19,19,22,.9);border:1px solid var(--line);color:var(--mut);padding:9px 15px;border-radius:99px;backdrop-filter:blur(6px);animation:floaty 7s ease-in-out infinite}
 .n-qr{top:6%;left:2%}
 .n-wa{top:22%;right:0;animation-delay:-2s}
 .n-maps{bottom:24%;left:-2%;animation-delay:-4s}
