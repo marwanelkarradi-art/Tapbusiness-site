@@ -68,6 +68,7 @@ h1,h2,h3{font-family:var(--font-d);line-height:1.15;letter-spacing:-.02em}
 .lead{color:var(--mut);font-size:clamp(1rem,2vw,1.18rem);max-width:520px;margin-bottom:36px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
 .hero-btns.center{justify-content:center}
+.trust-line{margin-top:26px;color:var(--dim);font-size:.85rem;letter-spacing:.02em}
 .hero-scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);width:26px;height:42px;border:2px solid var(--line);border-radius:14px;display:flex;justify-content:center;padding-top:8px}
 .hero-scroll span{width:4px;height:8px;border-radius:4px;background:var(--gold);animation:scrolldot 2s infinite}
 @keyframes scrolldot{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
