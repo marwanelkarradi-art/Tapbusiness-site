@@ -3,253 +3,414 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TAPBusiness.ma — Le menu digital de votre restaurant</title>
-<meta name="description" content="Menu digital avec QR code pour restaurants au Maroc. Bilingue FR/AR, commande WhatsApp, sans application.">
+<title>TAPBusiness — Digital experiences for modern restaurants · Maroc</title>
+<meta name="description" content="TAPBusiness crée l'expérience digitale des restaurants modernes au Maroc : menu digital, QR intelligent, commandes WhatsApp, présence digitale. Sans application.">
+<link rel="canonical" href="https://tapbusiness-ma.github.io/Tapbusiness-site/">
+<meta property="og:title" content="TAPBusiness — Digital experiences for modern restaurants">
+<meta property="og:description" content="Menu digital, QR intelligent, WhatsApp et présence digitale — une expérience simple et moderne pensée pour les restaurants marocains.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tapbusiness-ma.github.io/Tapbusiness-site/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0b'/%3E%3Cpath d='M35 8 18 36h11l-2 20 17-28H23z' fill='%23d9a441'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
-<div class="scroll-progress" id="scrollProgress"></div>
-<div class="cursor-glow" id="cursorGlow"></div>
+<a class="skip" href="#main">Aller au contenu</a>
 
-<!-- NAVBAR -->
-<nav id="navbar">
+<!-- ══════════ NAV ══════════ -->
+<nav id="navbar" aria-label="Navigation principale">
   <div class="nav-inner">
-    <a href="#" class="logo">⚡ TAPBusiness<span>.ma</span></a>
+    <a href="#top" class="logo" aria-label="TAPBusiness — accueil"><span class="logo-mark">◆</span>TAPBusiness</a>
     <div class="nav-links" id="navLinks">
-      <a href="#features">Services</a>
+      <a href="#solutions">Solutions</a>
       <a href="#demo">Démo</a>
-      <a href="#avis">Avis</a>
-      <a href="#pricing">Tarifs</a>
+      <a href="#how">Comment ça marche</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
     </div>
-    <a href="https://wa.me/212771899120" class="btn btn-sm" target="_blank">💬 WhatsApp</a>
-    <button class="burger" id="burger">☰</button>
+    <div class="nav-cta">
+      <a href="#demo" class="btn btn-ghost btn-sm">Voir la démo</a>
+      <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20mon%20menu%20digital%20gratuitement" class="btn btn-sm" target="_blank" rel="noopener">Créer mon menu</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <button class="mm-close" id="mmClose" aria-label="Fermer le menu">✕</button>
+  <a href="#solutions">Solutions</a>
+  <a href="#demo">Démo</a>
+  <a href="#how">Comment ça marche</a>
+  <a href="#tarifs">Tarifs</a>
+  <a href="#faq">FAQ</a>
+  <div class="mm-cta">
+    <a href="#demo" class="btn btn-ghost btn-big">Voir la démo</a>
+    <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20mon%20menu%20digital%20gratuitement" class="btn btn-big" target="_blank" rel="noopener">Créer mon menu</a>
+  </div>
+</div>
 
-<!-- HERO -->
-<header class="hero">
-  <canvas id="particles"></canvas>
+<main id="main">
+
+<!-- ══════════ HERO ══════════ -->
+<header class="hero" id="top">
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="eyebrow">✦ Menus digitaux — Maroc</div>
-      <h1>Votre restaurant,<br><span class="grad">100% digital.</span></h1>
-      <div class="typed-line">Parfait pour <span id="typed"></span><span class="caret">▍</span></div>
-      <p class="lead">Le client scanne le QR code, explore votre menu en photos et commande sur WhatsApp. Élégant. Rapide. Sans application.</p>
+      <p class="eyebrow">TAPBusiness · Maroc</p>
+      <h1>Transformez votre restaurant en <span class="gold">expérience digitale.</span></h1>
+      <p class="lead">Menu digital, QR intelligent, WhatsApp et présence digitale — une expérience simple et moderne pensée pour les restaurants marocains.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/212771899120?text=Bonjour,%20je%20veux%20mon%20menu%20digital%20🍽️" class="btn" target="_blank">Créer mon menu gratuitement →</a>
-        <a href="#demo" class="btn btn-ghost">Voir la démo</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong><span class="count" data-to="100">0</span>%</strong><span>compatible mobile</span></div>
-        <div><strong><span class="count" data-to="30">0</span>s</strong><span>pour scanner</span></div>
-        <div><strong><span class="count" data-to="3">0</span></strong><span>étapes: QR → menu → commande</span></div>
+        <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20mon%20menu%20digital%20gratuitement" class="btn btn-big" target="_blank" rel="noopener">Créer mon menu gratuitement</a>
+        <a href="#demo" class="btn btn-ghost btn-big">Voir la démo</a>
       </div>
     </div>
     <div class="hero-visual">
-      <div class="phone">
+      <div class="orbit" aria-hidden="true">
+        <span class="onode n-qr">QR</span>
+        <span class="onode n-wa">WhatsApp</span>
+        <span class="onode n-maps">Google Maps</span>
+        <span class="onode n-ig">Instagram</span>
+        <span class="onode n-menu">Menu</span>
+      </div>
+      <div class="phone" id="heroPhone" role="img" aria-label="Animation : scan du QR, menu digital, commande WhatsApp">
         <div class="phone-notch"></div>
         <div class="phone-screen">
-          <div class="mini-brand">🍽️ Chez Yasmine</div>
-          <div class="mini-cats"><span class="on">Tacos</span><span>Pizza</span><span>Boissons</span></div>
-          <div class="mini-item"><div><b>Tacos XL</b><small>Poulet, frites, sauce algérienne</small></div><em>45 DH</em></div>
-          <div class="mini-item"><div><b>Pizza 4 fromages</b><small>Mozzarella, gorgonzola...</small></div><em>60 DH</em></div>
-          <div class="mini-order">💬 Commander sur WhatsApp</div>
+          <div class="hs-stage hs-qr is-active" data-stage="0">
+            <div class="hs-qrbox"><div id="heroQr"></div><div class="scanline"></div></div>
+            <p class="hs-cap">Scannez le QR</p>
+          </div>
+          <div class="hs-stage hs-menu" data-stage="1">
+            <div class="hs-brand">Chez Yasmine</div>
+            <div class="hs-cats"><span class="on">Tacos</span><span>Pizza</span><span>Jus</span></div>
+            <div class="hs-item"><img data-wimg="IMGS1:tacos-poulet-xl" alt="Tacos poulet"><div><b>Tacos poulet XL</b><small>Poulet, frites, sauce algérienne</small></div><em>45&nbsp;DH</em></div>
+            <div class="hs-item"><img data-wimg="IMGS1:tacos-mixte-xxl" alt="Tacos mixte"><div><b>Tacos mixte XXL</b><small>Viande &amp; poulet, frites maison</small></div><em>55&nbsp;DH</em></div>
+            <div class="hs-cartbar">Panier · <b id="hsCount">0</b> article(s)</div>
+          </div>
+          <div class="hs-stage hs-wa" data-stage="2">
+            <div class="hs-wa-head">Commande WhatsApp</div>
+            <div class="hs-bubble">Bonjour, je commande :<br>• 1× Tacos poulet XL — 45 DH<br>• 1× Jus d'avocat — 20 DH<br><b>Total : 65 DH · Table 4</b></div>
+            <div class="hs-bubble reply">Parfait, c'est noté !<br>Arrive dans 15 min.</div>
+          </div>
         </div>
       </div>
-      <div class="float-badge b1">📱 Scan → Menu</div>
-      <div class="float-badge b2">💬 Commande reçue !</div>
     </div>
   </div>
+  <div class="hero-scroll" aria-hidden="true"><span></span></div>
 </header>
 
-<!-- QR GENERATOR -->
-<section id="qr-generator" class="section">
-  <div class="eyebrow center">✦ Jereb daba</div>
-  <h2 class="sec-title reveal">Generi <span class="grad">QR code dyalek</span></h2>
-  <div class="qr-box reveal">
-    <div class="qr-form">
-      <label for="qrName">Smit restaurant dyalek</label>
-      <input type="text" id="qrName" placeholder="b7al: Chez Yasmine" maxlength="40" autocomplete="off">
-      <div class="qr-modes">
-        <button type="button" class="on" data-qrmode="name">🍽️ Smiya dyal resto</button>
-        <button type="button" data-qrmode="url">🔗 Lien khass (Google reviews...)</button>
-      </div>
-      <label for="qrUrl" id="qrUrlLabel" style="display:none">Lien dyalek</label>
-      <input type="text" id="qrUrl" placeholder="https://g.page/r/..." autocomplete="off" style="display:none">
-      <label>Style dyal QR</label>
-      <div class="qr-styles">
-        <button type="button" class="on" data-dark="#0d9488" data-light="#ffffff"><i style="background:#0d9488"></i>Teal</button>
-        <button type="button" data-dark="#b8860b" data-light="#ffffff"><i style="background:#e8c15a"></i>Gold</button>
-        <button type="button" data-dark="#141414" data-light="#ffffff"><i style="background:#141414"></i>Dark</button>
-      </div>
-      <button class="btn" id="qrBtn" type="button">⚡ Generi QR dyali</button>
-      <p class="qr-note">Scannih b telephonek — ghadi y7el <b>menu démo</b> 3amer b les plats 🔗</p>
-    </div>
-    <div class="qr-result">
-      <div class="qr-card">
-        <div id="qrCanvas" aria-label="QR code généré"></div>
-        <div class="qr-card-name" id="qrCardName">🍽️ Chez Yasmine</div>
-        <div class="qr-card-url" id="qrCardUrl">marwanelkarradi-art.github.io/Tapbusiness-site/demo.html?r=chez-yasmine</div>
-      </div>
-      <p class="qr-hint">Hakka ghadi ychoufou clients dyalek <b>menu 3amer</b> b les choix 👆</p>
-      <button class="btn btn-ghost btn-sm" id="qrDl" type="button">⬇️ Télécharger QR</button>
-    </div>
+<!-- ══════════ BRAND STATEMENT ══════════ -->
+<section class="statement">
+  <div class="wrap narrow center">
+    <p class="big-line reveal">Le digital ne doit pas compliquer votre restaurant.</p>
+    <p class="big-line dim reveal">Il doit simplement rendre l'expérience <span class="gold">meilleure.</span></p>
   </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee"><div class="marquee-track">
-  <span>QR CODE ✦ BILINGUE FR/AR ✦ COMMANDE WHATSAPP ✦ SANS APPLICATION ✦ PHOTOS HD ✦ MISE À JOUR INSTANTANÉE ✦&nbsp;</span>
-  <span>QR CODE ✦ BILINGUE FR/AR ✦ COMMANDE WHATSAPP ✦ SANS APPLICATION ✦ PHOTOS HD ✦ MISE À JOUR INSTANTANÉE ✦&nbsp;</span>
-</div></div>
-
-<!-- FEATURES -->
-<section id="features" class="section">
-  <div class="eyebrow center">✦ Nos services</div>
-  <h2 class="sec-title reveal">Tout pour <span class="grad">impressionner</span> vos clients</h2>
-  <div class="grid">
-    <div class="card reveal"><div class="ico">📱</div><h3>QR Code élégant</h3><p>Un QR code design à poser sur tables et vitrine. Scan instantané, zéro attente.</p></div>
-    <div class="card reveal"><div class="ico">🌍</div><h3>Bilingue FR / AR</h3><p>Chaque menu existe en français et en arabe. Le client choisit sa langue.</p></div>
-    <div class="card reveal"><div class="ico">💬</div><h3>Commande WhatsApp</h3><p>La commande arrive directement sur votre WhatsApp, avec le numéro de table.</p></div>
-    <div class="card reveal"><div class="ico">📸</div><h3>Photos appétissantes</h3><p>Des visuels HD qui donnent envie. Fini les menus papier froissés.</p></div>
-    <div class="card reveal"><div class="ico">⚡</div><h3>Zéro application</h3><p>Tout marche dans le navigateur. Rien à installer, ni pour vous ni pour vos clients.</p></div>
-    <div class="card reveal"><div class="ico">🔄</div><h3>Modifs en 1 minute</h3><p>Plat épuisé ? Prix changé ? Un message WhatsApp et c'est en ligne.</p></div>
+<!-- ══════════ ÉCOSYSTÈME ══════════ -->
+<section id="solutions" class="section">
+  <div class="wrap center">
+    <p class="eyebrow center reveal">L'écosystème</p>
+    <h2 class="sec-title reveal">Une seule expérience.<br><span class="gold">Plusieurs points de contact.</span></h2>
+    <div class="eco-sys reveal" role="img" aria-label="Écosystème TAPBusiness : menu digital, QR, WhatsApp, Instagram, Google Maps et expérience client connectés">
+      <div class="eco-center"><span class="logo-mark">◆</span>TAPBusiness</div>
+      <span class="eco-node e1">Menu<br>digital</span>
+      <span class="eco-node e2">QR</span>
+      <span class="eco-node e3">WhatsApp</span>
+      <span class="eco-node e4">Instagram</span>
+      <span class="eco-node e5">Google<br>Maps</span>
+      <span class="eco-node e6">Expérience<br>client</span>
+    </div>
+    <p class="sec-sub reveal">Le QR n'est que la porte d'entrée.<br>Le produit, c'est tout ce qu'il y a derrière.</p>
   </div>
 </section>
 
-<!-- DÉMO -->
+<!-- ══════════ DÉMO ══════════ -->
 <section id="demo" class="section section-alt">
   <div class="wrap">
-    <div class="eyebrow center">✦ Démo interactive</div>
-    <h2 class="sec-title reveal">Testez comme un <span class="grad">vrai client</span></h2>
-    <div class="demo-box reveal">
-      <div class="demo-cats" id="demoCats">
-        <button class="on" data-cat="tacos">🌮 Tacos</button>
-        <button data-cat="pizza">🍕 Pizza</button>
-        <button data-cat="drinks">🥤 Boissons</button>
+    <p class="eyebrow center reveal">Démo interactive</p>
+    <h2 class="sec-title reveal">Voyez-le <span class="gold">en action.</span></h2>
+    <p class="sec-sub reveal">Le vrai menu démo TAPBusiness. Touchez, explorez — comme un client.</p>
+    <div class="demo-layout">
+      <div class="phone demo-phone reveal">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="hs-brand">Chez Yasmine <small>· Démo</small></div>
+          <div class="demo-cats" id="demoCats">
+            <button class="on" data-cat="tacos">Tacos</button>
+            <button data-cat="pizza">Pizza</button>
+            <button data-cat="drinks">Boissons</button>
+          </div>
+          <div class="demo-items" id="demoItems"></div>
+          <a class="hs-order" href="https://wa.me/212771899120?text=Bonjour%2C%20je%20veux%20commander%20(menu%20d%C3%A9mo)" target="_blank" rel="noopener">Commander sur WhatsApp</a>
+        </div>
       </div>
-      <div class="demo-items" id="demoItems"></div>
-      <a href="https://wa.me/212771899120?text=Bonjour,%20je%20veux%20commander%20🍽️" class="btn" target="_blank">💬 Commander sur WhatsApp</a>
+      <div class="demo-copy">
+        <div class="flow">
+          <span>Scan</span><i>→</i><span>Menu</span><i>→</i><span>Choix</span><i>→</i><span>Panier</span><i>→</i><span>WhatsApp</span>
+        </div>
+        <h3 class="reveal">Le même menu que vos clients verront.</h3>
+        <p class="reveal">Photos HD, prix à jour, commande en un message WhatsApp. En français et en arabe.</p>
+        <a href="demo.html?r=chez-yasmine" class="btn btn-big reveal">Tester la démo →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- BEFORE / AFTER -->
-<section id="before-after" class="section">
-  <div class="eyebrow center">✦ 9bel / Daba</div>
-  <h2 class="sec-title reveal">Jerr <span class="grad">l'khet</span> w chouf l'fer9</h2>
-  <div class="ba-wrap reveal">
-    <div class="ba-slider" id="baSlider">
-      <div class="ba-pane ba-after">
-        <div class="digi">
-          <div class="digi-head"><span>🍽️ Chez Yasmine</span><span class="digi-live">● en ligne</span></div>
-          <div class="digi-item"><img data-wimg="IMGS1:tacos-poulet-xl" alt="Tacos"><div><b>Tacos XL</b><small>Poulet, frites, sauce algérienne</small></div><em>45 DH</em></div>
-          <div class="digi-item"><img data-wimg="IMGS2:pizza-4-fromages" alt="Pizza"><div><b>Pizza 4 fromages</b><small>Mozzarella, gorgonzola...</small></div><em>60 DH</em></div>
-          <div class="digi-item"><img data-wimg="IMGS3:jus-avocat" alt="Jus d'avocat"><div><b>Jus d'avocat</b><small>Frais, sans sucre ajouté</small></div><em>20 DH</em></div>
-          <div class="digi-qrrow"><div id="digiQr"></div><small>Scanni b telephonek — menu kamel 📱</small></div>
-          <div class="digi-order">💬 Commander sur WhatsApp</div>
-        </div>
-      </div>
-      <div class="ba-pane ba-before" id="baBefore">
-        <div class="paper">
-          <h4>— MENU —</h4>
-          <div class="paper-item"><span>Tacos Poulet</span><span class="dots"></span><span>45</span></div>
-          <div class="paper-item"><span>Tacos Viande</span><span class="dots"></span><span>40</span></div>
-          <div class="paper-item"><span>Pizza <s>55</s> 60</span><span class="dots"></span><span>60</span></div>
-          <div class="paper-item"><span>Jus d'avocat</span><span class="dots"></span><span>???</span></div>
-          <div class="paper-item"><span>Panaché</span><span class="dots"></span><span>18</span></div>
-          <p class="paper-foot">* prix 9dam... sowel serveur 😅</p>
-          <div class="stain"></div>
-        </div>
-      </div>
-      <div class="ba-handle" id="baHandle" tabindex="0" aria-label="Curseur avant / après"><span>⟨ ⟩</span></div>
-      <div class="ba-tag ba-tag-l">📄 9bel: war9a</div>
-      <div class="ba-tag ba-tag-r">📱 Daba: digital</div>
-    </div>
-  </div>
-</section>
-
-<!-- STEPS -->
-<section class="section">
-  <div class="eyebrow center">✦ Simple comme 1-2-3</div>
-  <h2 class="sec-title reveal">En ligne en <span class="grad">24 heures</span></h2>
-  <div class="steps">
-    <div class="step reveal"><div class="step-n">01</div><h3>Envoyez votre menu</h3><p>Plats, prix, photos — par WhatsApp. On s'occupe du reste.</p></div>
-    <div class="step reveal"><div class="step-n">02</div><h3>Recevez votre QR</h3><p>QR code élégant + lien, prêts à poser sur vos tables.</p></div>
-    <div class="step reveal"><div class="step-n">03</div><h3>Recevez des commandes</h3><p>Scan → menu → WhatsApp. Vos clients adorent.</p></div>
-  </div>
-</section>
-
-<!-- AVIS -->
-<section id="avis" class="section section-alt">
+<!-- ══════════ QR TOOL ══════════ -->
+<section id="qr" class="section">
   <div class="wrap">
-    <div class="eyebrow center">✦ Ils nous font confiance</div>
-    <h2 class="sec-title reveal">Ce que disent les <span class="grad">restaurateurs</span></h2>
-    <div class="avis-grid">
-      <div class="avis reveal"><div class="stars">★★★★★</div><p>"Les clients scannent et commandent tout seuls. On gagne un temps fou en salle."</p><b>— Karim B., Restaurant Agadir</b></div>
-      <div class="avis reveal"><div class="stars">★★★★★</div><p>"Le menu en arabe a tout changé, nos clients âgés l'utilisent sans problème."</p><b>— Salma E., Café Casablanca</b></div>
-      <div class="avis reveal"><div class="stars">★★★★★</div><p>"Fini les 200 DH d'impression à chaque changement de prix. Tout est en ligne."</p><b>— Youssef M., Snack Marrakech</b></div>
+    <p class="eyebrow center reveal">Outil gratuit</p>
+    <h2 class="sec-title reveal">Générez votre <span class="gold">QR code.</span></h2>
+    <p class="sec-sub reveal">Scannez avec votre téléphone pour tester.</p>
+    <div class="qr-box reveal">
+      <div class="qr-form">
+        <div class="qr-modes" role="tablist" aria-label="Type de QR">
+          <button type="button" class="on" data-qrmode="name" role="tab" aria-selected="true">Nom du restaurant</button>
+          <button type="button" data-qrmode="url" role="tab" aria-selected="false">Lien personnalisé</button>
+        </div>
+        <label for="qrName" id="qrNameLabel">Nom du restaurant</label>
+        <input type="text" id="qrName" placeholder="Ex : Chez Yasmine" maxlength="40" autocomplete="off">
+        <label for="qrUrl" id="qrUrlLabel" hidden>Lien personnalisé</label>
+        <input type="text" id="qrUrl" placeholder="https://…" autocomplete="off" inputmode="url" hidden>
+        <label>Style</label>
+        <div class="qr-styles">
+          <button type="button" class="on" data-dark="#0d9488" data-light="#ffffff"><i style="background:#0d9488"></i>Émeraude</button>
+          <button type="button" data-dark="#b8860b" data-light="#ffffff"><i style="background:#d9a441"></i>Or</button>
+          <button type="button" data-dark="#141414" data-light="#ffffff"><i style="background:#141414"></i>Noir</button>
+        </div>
+        <button class="btn" id="qrBtn" type="button">Générer mon QR</button>
+      </div>
+      <div class="qr-result">
+        <div class="qr-card">
+          <div id="qrCanvas" aria-label="QR code généré"></div>
+          <div class="qr-card-name" id="qrCardName">Chez Yasmine</div>
+          <div class="qr-card-url" id="qrCardUrl">tapbusiness-ma.github.io/…</div>
+        </div>
+        <button class="btn btn-ghost btn-sm" id="qrDl" type="button">Télécharger le QR</button>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TARIFS -->
-<section id="pricing" class="section">
-  <div class="eyebrow center">✦ Tarifs</div>
-  <h2 class="sec-title reveal">Un prix <span class="grad">honnête</span>, sans surprise</h2>
-  <div class="pricing">
-    <div class="price-card reveal">
-      <h3>Découverte</h3><div class="prix">0 <small>DH</small></div><p class="per">démo 7 jours</p>
-      <ul><li>✅ Menu démo</li><li>✅ QR code test</li><li>❌ Commande WhatsApp</li></ul>
-      <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20essayer%20la%20d%C3%A9mo%20gratuite%20%F0%9F%8D%BD" class="btn btn-ghost" target="_blank">Essayer</a>
-    </div>
-    <div class="price-card hot reveal">
-      <div class="tag">★ Populaire</div>
-      <h3>Pro</h3><div class="prix">99 <small>DH/mois</small></div><p class="per">par restaurant</p>
-      <ul><li>✅ Menu complet FR/AR</li><li>✅ QR code tables</li><li>✅ Commande WhatsApp</li><li>✅ Modifs illimitées</li></ul>
-      <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27offre%20Pro%20%C3%A0%2099%20DH%2Fmois%20%F0%9F%8D%BD" class="btn" target="_blank">Commencer</a>
-    </div>
-    <div class="price-card reveal">
-      <h3>Premium</h3><div class="prix">199 <small>DH/mois</small></div><p class="per">par restaurant</p>
-      <ul><li>✅ Tout le Pro</li><li>✅ Design sur-mesure</li><li>✅ QR multi-tables</li><li>✅ Support prioritaire</li></ul>
-      <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20l%27offre%20Premium%20%C3%A0%20199%20DH%2Fmois%20%F0%9F%8D%BD" class="btn btn-ghost" target="_blank">Choisir</a>
+<!-- ══════════ JOURNEY ══════════ -->
+<section id="journey" class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow center reveal">Le parcours client</p>
+    <h2 class="sec-title reveal">Tout commence par <span class="gold">un scan.</span></h2>
+    <ol class="journey">
+      <li class="reveal"><span class="j-n">01</span><div><b>Scan</b><p>Le client scanne le QR posé sur la table.</p></div></li>
+      <li class="reveal"><span class="j-n">02</span><div><b>Discover</b><p>Il découvre votre menu, vos photos, votre univers.</p></div></li>
+      <li class="reveal"><span class="j-n">03</span><div><b>Choose</b><p>Il explore les catégories et choisit ses plats.</p></div></li>
+      <li class="reveal"><span class="j-n">04</span><div><b>Connect</b><p>Il vous contacte et commande via WhatsApp.</p></div></li>
+      <li class="reveal"><span class="j-n">05</span><div><b>Return</b><p>Il retrouve votre restaurant facilement — et revient.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ HOW ══════════ -->
+<section id="how" class="section">
+  <div class="wrap">
+    <p class="eyebrow center reveal">Comment ça marche</p>
+    <h2 class="sec-title reveal">En ligne en <span class="gold">24 heures.</span></h2>
+    <div class="steps">
+      <article class="step reveal"><div class="step-n">01</div><h3>Votre restaurant</h3><p>Vous nous envoyez votre menu — plats, prix, photos — par WhatsApp.</p></article>
+      <article class="step reveal"><div class="step-n">02</div><h3>Nous créons votre expérience digitale</h3><p>Menu digital, QR élégant et lien : prêts à poser sur vos tables.</p></article>
+      <article class="step reveal"><div class="step-n">03</div><h3>Vos clients scannent et découvrent</h3><p>Scan → menu → WhatsApp. Une expérience que vos clients adorent.</p></article>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
+<!-- ══════════ BEFORE / AFTER ══════════ -->
+<section id="avant-apres" class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow center reveal">La transformation</p>
+    <h2 class="sec-title reveal">Faites glisser. <span class="gold">Voyez la différence.</span></h2>
+    <div class="ba-wrap reveal">
+      <div class="ba-slider" id="baSlider">
+        <div class="ba-pane ba-after">
+          <div class="digi">
+            <div class="digi-head"><span>Chez Yasmine</span><span class="digi-live">● en ligne</span></div>
+            <div class="digi-item"><img data-wimg="IMGS1:tacos-poulet-xl" alt="Tacos" loading="lazy"><div><b>Tacos XL</b><small>Poulet, frites, sauce algérienne</small></div><em>45 DH</em></div>
+            <div class="digi-item"><img data-wimg="IMGS2:pizza-4-fromages" alt="Pizza" loading="lazy"><div><b>Pizza 4 fromages</b><small>Mozzarella, gorgonzola…</small></div><em>60 DH</em></div>
+            <div class="digi-item"><img data-wimg="IMGS3:jus-avocat" alt="Jus d'avocat" loading="lazy"><div><b>Jus d'avocat</b><small>Frais, sans sucre ajouté</small></div><em>20 DH</em></div>
+            <div class="digi-qrrow"><div id="digiQr"></div><small>Scannez — le menu complet</small></div>
+            <div class="digi-order">Commander sur WhatsApp</div>
+          </div>
+        </div>
+        <div class="ba-pane ba-before" id="baBefore">
+          <div class="paper">
+            <h4>— MENU —</h4>
+            <div class="paper-item"><span>Tacos Poulet</span><span class="dots"></span><span>45</span></div>
+            <div class="paper-item"><span>Tacos Viande</span><span class="dots"></span><span>40</span></div>
+            <div class="paper-item"><span>Pizza <s>55</s> 60</span><span class="dots"></span><span>60</span></div>
+            <div class="paper-item"><span>Jus d'avocat</span><span class="dots"></span><span>???</span></div>
+            <div class="paper-item"><span>Panaché</span><span class="dots"></span><span>18</span></div>
+            <p class="paper-foot">* prix anciens… demandez au serveur</p>
+            <div class="stain"></div>
+          </div>
+        </div>
+        <div class="ba-handle" id="baHandle" tabindex="0" role="slider" aria-label="Curseur avant après" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span>⟨ ⟩</span></div>
+        <div class="ba-tag ba-tag-l">Avant : papier</div>
+        <div class="ba-tag ba-tag-r">Après : digital</div>
+      </div>
+    </div>
+    <div class="ba-cols">
+      <div class="ba-col bad reveal">
+        <h4>Avant</h4>
+        <ul><li>Menu papier qui s'abîme</li><li>Informations dispersées</li><li>Instagram et Maps séparés</li><li>Commandes compliquées</li><li>Mises à jour difficiles</li></ul>
+      </div>
+      <div class="ba-col good reveal">
+        <h4>Après</h4>
+        <ul><li>Une expérience digitale unique</li><li>Menu mobile, en photos</li><li>QR, WhatsApp, Instagram, Maps réunis</li><li>Informations centralisées</li><li>Prix à jour en quelques minutes</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHY ══════════ -->
+<section id="pourquoi" class="section">
+  <div class="wrap narrow">
+    <p class="eyebrow center reveal">Pourquoi TAPBusiness</p>
+    <h2 class="sec-title reveal">Pensé pour la réalité des <span class="gold">restaurants marocains.</span></h2>
+    <ul class="why">
+      <li class="reveal">WhatsApp-first : là où vos clients sont déjà</li>
+      <li class="reveal">Mobile-first : parfait sur téléphone</li>
+      <li class="reveal">Simple : aucune formation nécessaire</li>
+      <li class="reveal">Rapide : en ligne en 24 heures</li>
+      <li class="reveal">Sans application à installer</li>
+      <li class="reveal">Facile à mettre à jour</li>
+      <li class="reveal">Conçu pour cafés et restaurants</li>
+      <li class="reveal">Construit au Maroc, pour le Maroc</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════ SCÉNARIO ══════════ -->
+<section id="scenario" class="section section-alt">
+  <div class="wrap">
+    <p class="eyebrow center reveal">Imaginez</p>
+    <h2 class="sec-title reveal">Dans <span class="gold">votre</span> restaurant.</h2>
+    <ol class="scene">
+      <li class="reveal"><b>Il s'assoit.</b><span>Sur sa table : un QR TAPBusiness élégant.</span></li>
+      <li class="reveal"><b>Il scanne.</b><span>Le menu s'ouvre instantanément. Rien à installer.</span></li>
+      <li class="reveal"><b>Il parcourt.</b><span>Catégories, photos, prix — en français ou en arabe.</span></li>
+      <li class="reveal"><b>Il choisit.</b><span>Il compose sa commande en quelques touches.</span></li>
+      <li class="reveal"><b>Il envoie.</b><span>Vous recevez tout sur WhatsApp : plats, quantités, table.</span></li>
+      <li class="reveal"><b>Il repart.</b><span>Et vous retrouve facilement : Maps, Instagram, contact.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ══════════ FUTURE ══════════ -->
+<section id="futur" class="section">
+  <div class="wrap center">
+    <p class="eyebrow center reveal">La vision</p>
+    <h2 class="sec-title reveal">Et ce n'est que <span class="gold">le début.</span></h2>
+    <p class="sec-sub reveal">Nous construisons l'infrastructure digitale du restaurant moderne.<br>Voici ce qui arrive — honnêtement marqué comme tel.</p>
+    <div class="future-grid">
+      <span class="freveal">Fidélité client <em>À venir</em></span>
+      <span class="freveal">Statistiques <em>À venir</em></span>
+      <span class="freveal">Connaissance client <em>À venir</em></span>
+      <span class="freveal">Identité digitale <em>À venir</em></span>
+      <span class="freveal">Gestion restaurant <em>À venir</em></span>
+      <span class="freveal">Plus d'intégrations <em>À venir</em></span>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PREUVE ══════════ -->
+<section id="preuve" class="section section-alt">
+  <div class="wrap narrow center">
+    <p class="eyebrow center reveal">Le terrain</p>
+    <h2 class="sec-title reveal">Built for the next generation<br>of <span class="gold">Moroccan restaurants.</span></h2>
+    <p class="sec-sub reveal">Nous construisons avec de vrais restaurateurs — pas avec des promesses.<br>Cet espace accueillera bientôt leurs histoires.</p>
+    <p class="cities reveal">Agadir · Casablanca · Marrakech · Fès · partout au Maroc</p>
+    <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20faire%20partie%20des%20premiers%20restaurants%20digitalis%C3%A9s" class="btn reveal" target="_blank" rel="noopener">Faire partie des premiers</a>
+  </div>
+</section>
+
+<!-- ══════════ TARIFS ══════════ -->
+<section id="tarifs" class="section">
+  <div class="wrap">
+    <p class="eyebrow center reveal">Tarifs</p>
+    <h2 class="sec-title reveal">Simple. <span class="gold">Honnête.</span></h2>
+    <div class="pricing">
+      <article class="price-card reveal">
+        <h3>Découverte</h3><div class="prix">0 <small>DH</small></div><p class="per">démo 7 jours</p>
+        <ul><li>Menu démo</li><li>QR code test</li><li class="no">Commande WhatsApp</li></ul>
+        <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20essayer%20la%20d%C3%A9mo%20gratuite" class="btn btn-ghost" target="_blank" rel="noopener">Essayer</a>
+      </article>
+      <article class="price-card hot reveal">
+        <div class="tag">Recommandé</div>
+        <h3>Pro</h3><div class="prix">99 <small>DH/mois</small></div><p class="per">par restaurant</p>
+        <ul><li>Menu complet FR/AR</li><li>QR code tables</li><li>Commande WhatsApp</li><li>Modifications illimitées</li></ul>
+        <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27offre%20Pro%20%C3%A0%2099%20DH%2Fmois" class="btn" target="_blank" rel="noopener">Créer mon menu</a>
+      </article>
+      <article class="price-card reveal">
+        <h3>Premium</h3><div class="prix">199 <small>DH/mois</small></div><p class="per">par restaurant</p>
+        <ul><li>Tout le Pro</li><li>Design sur-mesure</li><li>QR multi-tables</li><li>Support prioritaire</li></ul>
+        <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20l%27offre%20Premium%20%C3%A0%20199%20DH%2Fmois" class="btn btn-ghost" target="_blank" rel="noopener">Choisir</a>
+      </article>
+    </div>
+    <p class="price-note reveal">Pas besoin d'application à installer.</p>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
 <section id="faq" class="section section-alt">
-  <div class="wrap">
-    <div class="eyebrow center">✦ FAQ</div>
-    <h2 class="sec-title reveal">Questions <span class="grad">fréquentes</span></h2>
+  <div class="wrap narrow">
+    <p class="eyebrow center reveal">FAQ</p>
+    <h2 class="sec-title reveal">Questions <span class="gold">fréquentes.</span></h2>
     <div class="faq reveal">
-      <div class="faq-item"><button class="faq-q">Faut-il installer une application ? <span>+</span></button><div class="faq-a">Non. Le menu s'ouvre dans le navigateur du téléphone, pour vous comme pour vos clients.</div></div>
-      <div class="faq-item"><button class="faq-q">Comment modifier un prix ? <span>+</span></button><div class="faq-a">Un simple message WhatsApp et la modification est en ligne en quelques minutes.</div></div>
-      <div class="faq-item"><button class="faq-q">Le menu est-il vraiment bilingue ? <span>+</span></button><div class="faq-a">Oui — français et arabe, avec un bouton pour changer de langue instantanément.</div></div>
-      <div class="faq-item"><button class="faq-q">Où arrivent les commandes ? <span>+</span></button><div class="faq-a">Directement sur votre WhatsApp : plats, quantités et numéro de table.</div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Comment fonctionne le QR ?<span>+</span></button><div class="faq-a"><p>Le client scanne le QR avec l'appareil photo de son téléphone. Le menu s'ouvre instantanément : plats, photos, prix — sans application.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Mes clients doivent-ils télécharger une application ?<span>+</span></button><div class="faq-a"><p>Non. Tout fonctionne dans le navigateur du téléphone, pour vous comme pour vos clients.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Puis-je modifier mon menu ?<span>+</span></button><div class="faq-a"><p>Oui. Un simple message WhatsApp et votre modification — prix, plat, photo — est en ligne en quelques minutes.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Comment fonctionne WhatsApp ?<span>+</span></button><div class="faq-a"><p>La commande du client arrive directement sur votre WhatsApp : plats, quantités et numéro de table. Vous confirmez en un message.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Est-ce adapté aux cafés ?<span>+</span></button><div class="faq-a"><p>Oui — cafés, snacks, pizzerias, glaciers : tout établissement qui présente un menu à ses clients.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Est-ce adapté aux restaurants ?<span>+</span></button><div class="faq-a"><p>Oui. Menu bilingue français/arabe, QR par table, commandes WhatsApp : pensé pour le service en salle comme à emporter.</p></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Combien de temps pour créer mon menu ?<span>+</span></button><div class="faq-a"><p>24 heures après réception de vos plats, prix et photos. La démo gratuite prend quelques minutes.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta">
-  <h2 class="reveal">Votre menu en ligne <span class="grad">dès demain.</span></h2>
-  <p class="reveal">Démo gratuite — réponse en moins de 24h.</p>
-  <a href="https://wa.me/212771899120?text=Bonjour,%20je%20veux%20mon%20menu%20digital%20🍽️" class="btn btn-big" target="_blank">💬 Démarrer sur WhatsApp</a>
-  <br><br>
-  <a href="https://www.instagram.com/tapbusiness.ma" class="btn btn-ghost" target="_blank">📸 Suivez-nous : @tapbusiness.ma</a>
+<!-- ══════════ CTA FINAL ══════════ -->
+<section class="final-cta">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap narrow center">
+    <h2 class="reveal">Votre restaurant mérite une <span class="gold">meilleure expérience digitale.</span></h2>
+    <p class="reveal">Commencez simplement. Évoluez avec TAPBusiness.</p>
+    <div class="hero-btns center reveal">
+      <a href="https://wa.me/212771899120?text=Bonjour%20TAPBusiness%2C%20je%20veux%20mon%20menu%20digital%20gratuitement" class="btn btn-big" target="_blank" rel="noopener">Créer mon menu gratuitement</a>
+      <a href="#demo" class="btn btn-ghost btn-big">Voir la démo</a>
+    </div>
+  </div>
 </section>
 
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
 <footer>
-  <div class="logo">⚡ TAPBusiness<span>.ma</span></div>
-  <p>Menus digitaux pour restaurants au Maroc 🇲🇦</p>
-  <p class="tiny"><a href="https://www.instagram.com/tapbusiness.ma" target="_blank" style="color:var(--gold);font-weight:600">📸 Instagram : @tapbusiness.ma</a></p>
-  <p class="tiny">Agadir • Casablanca • Marrakech</p>
+  <div class="wrap foot-grid">
+    <div class="foot-brand">
+      <span class="logo"><span class="logo-mark">◆</span>TAPBusiness</span>
+      <p>Digital experiences for modern restaurants.</p>
+    </div>
+    <nav class="foot-links" aria-label="Pied de page">
+      <a href="#solutions">Solutions</a>
+      <a href="#demo">Démo</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://wa.me/212771899120" target="_blank" rel="noopener">Contact</a>
+    </nav>
+    <div class="foot-social">
+      <a href="https://www.instagram.com/tapbusiness.ma" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wa.me/212771899120" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <p class="copy">© 2026 TAPBusiness</p>
 </footer>
 
 <script src="img1.js"></script>
@@ -257,7 +418,5 @@
 <script src="img3.js"></script>
 <script src="script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="js/qrgen.js"></script>
-<script src="js/widgets.js"></script>
 </body>
 </html>
